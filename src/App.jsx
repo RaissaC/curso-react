@@ -37,6 +37,14 @@ export default App;
 // export default App
 
 
-function App(){
-  return  <Titulo></Titulo>
+function App() {
+  return (
+    <div>
+      <Titulo cor="red" nome="Raissa" paragrafo={true} />
+      <Titulo cor="blue" nome="Joy" paragrafo={false} />
+      <Titulo cor="orange" paragrafo={true}/>
+      <Titulo paragrafo={false}/>
+    </div>
+
+  )
 }
