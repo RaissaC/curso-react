@@ -8,7 +8,7 @@ function Titulo({cor, nome, paragrafo}) {
                 :
                 <p></p>
             }
-        </div>
+        </div> 
     )
 }
 
