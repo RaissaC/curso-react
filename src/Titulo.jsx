@@ -1,14 +1,21 @@
+import { useState } from "react"
+
 // eslint-disable-next-line react/prop-types
-function Titulo({cor, nome, paragrafo}) {
+function Titulo({ cor }) {
+
+    const [texto, setTexto] = useState("Titulo inicial");
+    const [inputText, setInputText] = useState("");
+
+    function clicou(){
+        setTexto(inputText);
+    }
+
     return (
         <div>
-            <h1 style={{ color: cor }}>Olá eu sou {nome ? nome : "Fulano"}</h1>
-            {paragrafo ?
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium culpa a labore eos, et deleniti, adipisci asperiores facere cum quaerat sit numquam voluptatem similique deserunt assumenda ipsa, reprehenderit autem nulla?</p>
-                :
-                <p></p>
-            }
-        </div> 
+            <h1 style={{ color: cor }}>{texto}</h1>
+            <input type="text"value={inputText} onChange={(e) => {setInputText(e.target.value)}}/>
+            <button onClick={clicou}>Mudar</button>
+        </div>
     )
 }
 
